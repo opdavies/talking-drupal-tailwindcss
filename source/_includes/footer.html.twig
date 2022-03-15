@@ -1,0 +1,17 @@
+<footer class="mt-12 bg-[#D4D4D4] py-[17.5px]">
+  <div class="max-w-[1040px] mx-auto px-[10px]">
+    <nav>
+      <ul class="flex justify-end text-2xl space-x-8">
+        {% for link in links %}
+        <li>
+          <a href="#0" class="text-lg transition duration-200 {{ link.is_active ? 'text-secondary hover:text-primary focus:text-primary' : 'text-primary hover:text-secondary focus:text-secondary' }}">{{ link.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<div class="mt-4 mb-8 text-center">
+  <p class="text-gray">A clone of the talkingdrupal.com website in Tailwind CSS.</p>
+</div>

@@ -1,0 +1,15 @@
+<article>
+  <h2 class="text-3xl uppercase">
+    <a href="#0" class="text-secondary hover:text-primary focus:text-primary">
+      Talking Drupal #{{ episode.number }} - {{ episode.title }}
+    </a>
+  </h2>
+  
+  <time class="uppercase text-2xl text-primary" datetime="2022-03-08">
+    {{ episode.date|date('F j, Y') }}
+  </time>
+  
+  <div class="mt-1 text-gray">{{ episode.description|raw }}</div>
+  
+  {% include "episode-listen-button" with { episode } only %}
+</article>

@@ -1,0 +1,9 @@
+<nav>
+  <ul class="flex text-2xl space-x-8">
+    {% for link in links %}
+    <li>
+      <a href="#0" class="transition duration-200 {{ link.is_active ? 'text-secondary hover:text-white focus:text-white' : 'text-white hover:text-secondary focus:text-secondary' }}">{{ link.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

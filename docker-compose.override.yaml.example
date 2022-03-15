@@ -1,0 +1,15 @@
+services:
+  composer:
+    build:
+      context: .
+      target: composer
+    volumes:
+      - ./:/app
+    working_dir: /app
+    entrypoint: composer
+    networks:
+      - default
+
+  node:
+    environment:
+      - "NODE_ENV=production"

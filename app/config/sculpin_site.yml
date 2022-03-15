@@ -1,0 +1,13 @@
+main_menu:
+  -
+    title: Home
+    is_active: true
+  -
+    title: About Us
+    is_active: false
+  -
+    title: Hosts
+    is_active: false
+  -
+    title: Module of the Week
+    is_active: false

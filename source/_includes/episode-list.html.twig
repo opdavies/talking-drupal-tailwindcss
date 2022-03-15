@@ -1,0 +1,5 @@
+<ul class="space-y-12">
+  {% for episode in episodes %}
+    {% include "episode-teaser" with { episode } only %}
+  {% endfor %}
+</ul>

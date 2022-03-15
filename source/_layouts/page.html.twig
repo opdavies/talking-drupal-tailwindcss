@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="/dist/build.css"/>
+    <meta charset="utf-8"/>
+  </head>
+  <body class="min-h-screen bg-white font-sans">
+    {% include "navbar" with {
+      links: site.main_menu,
+    } only %}
+
+    <div class="mt-7 max-w-[1040px] mx-auto px-[10px]">
+      {% block content_top %}{% endblock %}
+
+      <div class="mt-12">
+        <div class="grid grid-cols-12 gap-3">
+          <div class="col-span-9">
+            {% block content %}{% endblock %}
+          </div>
+
+          <div class="col-span-3">
+            {% include "sidebar" %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12">
+      {% include "footer" with {
+        links: site.main_menu,
+      } only %}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+services:
+  app:
+    build:
+      context: .
+      target: web
+    volumes:
+      - ./:/app
+    working_dir: /app
+    user: sculpin
+    tty: true
+    networks:
+      - default
+      - web
+    labels:
+      - "traefik.docker.network=traefik_proxy"
+      - "traefik.http.routers.talkingdrupal.rule=Host(`talkingdrupal-tailwindcss.docker.localhost`)"
+    depends_on:
+      - node
+    expose:
+      - 8000
+
+  node:
+    build:
+      context: .
+      target: assets
+    volumes:
+      - ./:/app
+    working_dir: /app
+    networks:
+      - default
+    entrypoint: bash
+    command: "./run yarn:build:css"
+    user: node
+    tty: true
+    environment:
+      - "NODE_ENV=development"
+
+networks:
+  web:
+    name: traefik_proxy
