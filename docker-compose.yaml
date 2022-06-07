@@ -1,0 +1,25 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: tools/docker/Dockerfile
+      target: web
+    volumes:
+      - .:/app
+      - assets:/app/public/build
+    working_dir: /app
+    ports:
+      - "${DOCKER_WEB_PORT:-127.0.0.1:80}:80"
+    depends_on:
+      - php
+
+  php:
+    build:
+      context: .
+      dockerfile: tools/docker/Dockerfile
+      target: php-fpm
+    volumes:
+      - .:/app
+
+volumes:
+  assets: {}

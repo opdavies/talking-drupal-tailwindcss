@@ -1,0 +1,22 @@
+#!/bin/bash
+
+function yarn:build:css {
+  # Build the CSS assets, this is intended to be run within the "assets" container.
+
+  local args=()
+
+  if [[ "$NODE_ENV" == "development" ]]; then
+    args=(--watch)
+  else
+    args=(--minify)
+  fi
+
+  tailwindcss \
+    --config assets/tailwind.config.js \
+    --content "templates/**/*.html.twig" \
+    --input assets/css/tailwind.css \
+    --output public/build/tailwind.css \
+    "${args[@]}"
+}
+
+eval "${@}"

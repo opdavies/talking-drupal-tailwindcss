@@ -1,0 +1,77 @@
+---
+episodes:
+  -
+    number: 338
+    title: Tailwind CSS
+    date: 2022-03-08
+    description: |
+      <p>Today we are talking about Tailwind CSS with Oliver Davies.</p>
+  -
+    number: 337
+    title: Layout Paragraphs
+    date: 2022-03-01
+    description: |
+      <p>Today we are talking about Layout Paragraphs with Justin Toupin.</p>
+  -
+    number: 336
+    title: Discover Drupal
+    date: 2022-02-22
+    description: |
+      <p>Today we are talking about Discover Drupal with Angie Sabin.</p>
+  -
+    number: 335
+    title: LocalGov
+    date: 2022-02-15
+    description: |
+      <p>Today we are talking about LocalGov Drupal.</p>
+  -
+    number: 334
+    title: Managing Drupal teams in Government
+    date: 2022-02-08
+    description: |
+      <p>Today we are talking about Leading a Drupal Team in Government with Abigail Bowman and Laura Larrimore.</p>
+  -
+    number: 333
+    title: Behat
+    date: 2022-02-01
+    description: |
+      <p>Today we are talking about Behat with Chris Burgess.</p>
+  -
+    number: 332
+    title: Permissions management
+    date: 2022-01-25
+    description: |
+      <p>Today we are talking about Permission Management with Benji Fisher.</p>
+  -
+    number: 331
+    title: Migrating Paragraphs for the National Zoo
+    date: 2022-01-18
+    description: |
+      <p>Today we are talking about Migrating Paragraphs for the National Zoo with Mohammed El-Khatib.</p>
+  -
+    number: 330
+    title: Remote Development on a LAN
+    date: 2022-01-11
+    description: |
+      <p>Today we are talking about Remote Development on a LAN.</p>
+  -
+    number: 329
+    title: The Penguin Corps
+    date: 2022-01-04
+    description: |
+      <p>Today we are talking about The Penguin Corps with Stu Keroff and Students from the Penguin Corps.</p>
+main_menu:
+  -
+    title: Home
+    is_active: true
+  -
+    title: About Us
+    is_active: false
+  -
+    title: Hosts
+    is_active: false
+  -
+    title: Module of the Week
+    is_active: false
+name: Talking Drupal
+title: 'A weekly chat about web design and development by a group a guys with one thing in common, we love Drupal.'

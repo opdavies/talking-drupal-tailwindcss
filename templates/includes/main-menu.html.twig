@@ -1,0 +1,7 @@
+<nav class="px-6 py-2 absolute right-3 top-18 border-4 border-blue-800 rounded-md bg-blue-100 lg:relative lg:top-0 lg:right-0 lg:p-0 lg:flex lg:justify-end lg:border-0 lg:space-x-6 xl:space-x-8" x-trap="isOpen">
+  {% for link in main_menu %}
+  <a class="block text-2xl text-right transition-colors duration-200 {{ link.is_active ? 'text-blue-800 hover:text-blue-200 focus:text-blue-200' : 'text-white hover:text-blue-800 focus:text-blue-800' }}" href="#0">
+    {{ link.title }}
+  </a>
+  {% endfor %}
+</nav>

@@ -1,0 +1,18 @@
+<article>
+  <h3 class="text-xl leading-tight uppercase sm:text-2xl xl:text-3xl">
+    <a class="text-blue-800 hover:text-blue-200 focus:text-blue-200" href="#0">
+      {{ name }} #{{ episode.number }}
+      - {{ episode.title }}
+    </a>
+  </h3>
+
+  <time class="uppercase text-lg text-blue-200 xl:text-2xl" datetime="{{ episode.date|date('Y-m-d') }}">
+    {{ episode.date|date('F j, Y') }}
+  </time>
+
+  <div class="mt-1 leading-snug text-gray">{{ episode.description|raw }}</div>
+
+  <footer class="mt-2">
+    {% include "includes/episode-listen-button.html.twig" with { episode } only %}
+  </footer>
+</article>

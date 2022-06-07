@@ -1,0 +1,10 @@
+<ul class="flex flex-wrap justify-center">
+  {% for i in range(1, 9) %}
+    <li class="ml-6 {{ i is same as 1 ? 'font-bold' }}">
+      <a href="#0">{{ i }}</a>
+    </li>
+  {% endfor %}
+  <li class="ml-6"><a href="#0">...</a></li>
+  <li class="ml-6"><a href="#0">next ›</a></li>
+  <li class="ml-6"><a href="#0">last »</a></li>
+</ul>

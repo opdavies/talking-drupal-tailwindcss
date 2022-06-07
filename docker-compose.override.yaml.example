@@ -1,0 +1,16 @@
+services:
+  node:
+    build:
+      context: .
+      dockerfile: tools/docker/Dockerfile
+      target: assets
+    volumes:
+      - assets:/app/public/build
+      - ./:/app
+    working_dir: /app
+    entrypoint: bash
+    command: "./run yarn:build:css"
+    user: node
+    tty: true
+    environment:
+      - "NODE_ENV=development"

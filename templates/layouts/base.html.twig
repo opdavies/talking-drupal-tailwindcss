@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="./build/tailwind.css"/>
+    <meta charset="utf-8"/>
+    <title>{{ name }}</title>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+  <body>
+    {% include "includes/navbar.html.twig" with { main_menu } only %}
+
+    <div>
+      <div class="px-3 py-5 sm:px-5">
+        <div class="mx-auto xl:max-w-[1020px]">
+          <h1 class="text-xl italic text-blue-200 sm:text-4xl md:text-3xl md:leading-tight lg:text-[38px]">{{ title }}</h1>
+        </div>
+
+        <div class="mt-8 xl:mt-14">
+          <div class="mx-auto grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-4 xl:max-w-[1020px] xl:grid-cols-5">
+            <main class="md:col-span-3 xl:col-span-4">
+              {% block content %}{% endblock %}
+            </main>
+
+            <aside class="md:col-span-1">
+              {% include "includes/sidebar.html.twig" %}
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8">
+      {% include "includes/footer.html.twig" with { main_menu } only %}
+    </div>
+  </body>
+</html>

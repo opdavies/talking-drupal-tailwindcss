@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  h1:after,
+  h1:before {
+    @apply text-3xl leading-[0] italic sm:text-5xl md:text-3xl lg:text-4xl xl:text-5xl;
+  }
+
+  h1:after {
+    content: "”";
+  }
+
+  h1:before {
+    content: "“";
+  }
+}
