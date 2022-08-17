@@ -12,6 +12,8 @@ services:
       - "${DOCKER_WEB_PORT:-127.0.0.1:80}:80"
     depends_on:
       - php
+    env_file:
+      - .env
 
   php:
     build:
